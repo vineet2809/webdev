@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+<style>
+   body{
+       /*background-color: #285f97;*/
+       background-image: url(QlF13TB.jpg);
+       color:white;
+       min-height: 100vh;
+        
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       overflow-x:hidden;
+     }
+
+    h1{
+        margin-top: 18%;
+        margin-bottom: 0px;
+    }
+    
+</style>
+
+    
+
+
+
+
+</head>
+
+
+<body>
+  
+ <div class="container">
+     <h1 class="text-center display-1">Todo List</h1>
+    <div class="row">
+                <div class="input-group">
+                 <input type="text" class="form-control" id="input" aria-describedby="emailHelp" placeholder="this is a to do list item"><span>
+
+
+                        <button class="btn btn-primary" id="btn">Submit</button>
+
+                 </span>
+                  
+                </div>
+                
+           
+     </div>
+     <div class="row">
+       <ul id="list">
+           
+       </ul>
+
+     </div>
+ </div>
+<script>
+   window.onload=function()
+   {
+       let form=document.getElementById("form")
+       let input=document.getElementById("input")
+       let btn=document.getElementById("btn")
+       let list=document.getElementById("list")
+       btn.onclick=function()
+       { console.log("onclick")
+           let text=input.value;
+           let item=document.createElement('li')
+           item.innerText=text;
+
+           list.appendChild(item)
+       }
+   }
+
+
+
+
+</script>
+</body>
+</html>
